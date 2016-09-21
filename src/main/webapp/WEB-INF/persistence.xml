@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+    <persistence-unit name="championsServer" transaction-type="RESOURCE_LOCAL">
+
+        <class>com.rs.darbaan.entity.</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                 value="jdbc:mysql://champions-mum.cuho3f4prwc9.ap-south-1.rds.amazonaws.com:3306/champions"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="champions"/>
+            <property name="javax.persistence.jdbc.password" value="tester123"/>
+        </properties>
+    </persistence-unit>
+</persistence>
