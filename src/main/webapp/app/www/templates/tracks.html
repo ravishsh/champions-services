@@ -1,0 +1,31 @@
+<ion-view title="Tracks" id="page4">
+    <ion-content padding="true" class="has-header">
+<!--        <ion-list id="scores-list2">
+            <ion-item class="item-icon-left item-icon-right" id="scores-list-item6">
+                <i class="icon ion-ios-stopwatch"></i>54.3 secs
+                <span class="item-note">Gold</span>
+                <i class="icon ion-ribbon-a"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right" id="scores-list-item7">
+                <i class="icon ion-ios-stopwatch"></i>45.6 secs
+                <span class="item-note">Silver</span>
+                <i class="icon ion-ribbon-a"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right" id="scores-list-item8">
+                <i class="icon ion-ios-stopwatch"></i>34.6 secs
+                <span class="item-note">Bronze</span>
+                <i class="icon ion-ribbon-a"></i>
+            </ion-item>
+        </ion-list>-->
+        <ion-list id="tracks-list" class="item-icon-left item-icon-right">
+            <ion-item class="item-icon-left item-icon-right" ng-repeat="eventTrack in eventTracks" id="{{eventTrack.eventTrackId}}" ui-sref="tabsController.scores({id: eventTrack.eventTrackId})">
+                <i class="icon ion-ios-stopwatch"></i>{{eventTrack.trackVO.track}}
+                <span class="item-note">Bronze</span>
+                <i class="icon ion-ribbon-a"></i>
+                <md-button>
+                    <img class="png-icon" src="img/BreastStroke.png" style="width: 44px; height: 44px;">
+                </md-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

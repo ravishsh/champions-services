@@ -19,6 +19,17 @@ public class ChampionshipEvent {
 	@Column(name = "event", nullable = false)
 	private String event;
 
+	@Column(name = "eventstatus_id", nullable = false)
+	private Long eventStatusId;
+	
+	public Long getEventStatus() {
+		return eventStatusId;
+	}
+
+	public void setEventStatus(Long eventStatusId) {
+		this.eventStatusId = eventStatusId;
+	}
+
 	public Long getEventId() {
 		return eventId;
 	}

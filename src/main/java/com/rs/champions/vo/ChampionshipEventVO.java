@@ -1,9 +1,17 @@
 package com.rs.champions.vo;
 
 public class ChampionshipEventVO {
-	private long eventId;
-	
+	private long eventId;	
 	private String event;
+	private long eventStatusId;
+
+	public long getEventStatusId() {
+		return eventStatusId;
+	}
+
+	public void setEventStatusId(long eventStatusId) {
+		this.eventStatusId = eventStatusId;
+	}
 
 	public long getEventId() {
 		return eventId;

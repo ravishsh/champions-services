@@ -36,6 +36,7 @@ public class ChampionshipEventUtil {
 		ChampionshipEventVO championshipEventVO = new ChampionshipEventVO();
 		championshipEventVO.setEventId((championshipEvent.getEventId()));
 		championshipEventVO.setEvent(championshipEvent.getEvent());
+		championshipEventVO.setEventStatusId(championshipEvent.getEventStatus());
 		return championshipEventVO;
 	}
 	
@@ -47,6 +48,7 @@ public class ChampionshipEventUtil {
 		ChampionshipEvent championshipEvent = new ChampionshipEvent();
 		championshipEvent.setEventId(championshipEventVO.getEventId());
 		championshipEvent.setEvent(championshipEventVO.getEvent());
-		return championshipEvent;
+		championshipEvent.setEventStatus(championshipEventVO.getEventStatusId());
+		return championshipEventRepository.save(championshipEvent);
 	}
 }

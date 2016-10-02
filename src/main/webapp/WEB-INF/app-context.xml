@@ -37,6 +37,9 @@
   		<jaxrs:serviceBeans>
   			<ref bean="cityService"/>
   			<ref bean="eventService"/>
+  			<ref bean="eventScoreService"/> 
+  			<ref bean="eventTrackService"/> 
+  			<ref bean="userService"/>			
   		</jaxrs:serviceBeans>
   		<jaxrs:providers>
 			<ref bean="jsonProvider" />

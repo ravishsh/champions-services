@@ -1,0 +1,27 @@
+<ion-view title="Scores" id="page3">
+    <ion-content padding="true" class="has-header">
+<!--        <ion-list id="scores-list2">
+            <ion-item class="item-icon-left item-icon-right" id="scores-list-item6">
+                <i class="icon ion-ios-stopwatch"></i>54.3 secs
+                <span class="item-note">Gold</span>
+                <i class="icon ion-ribbon-a"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right" id="scores-list-item7">
+                <i class="icon ion-ios-stopwatch"></i>45.6 secs
+                <span class="item-note">Silver</span>
+                <i class="icon ion-ribbon-a"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right" id="scores-list-item8">
+                <i class="icon ion-ios-stopwatch"></i>34.6 secs
+                <span class="item-note">Bronze</span>
+                <i class="icon ion-ribbon-a"></i>
+            </ion-item>
+        </ion-list>-->
+        <ion-list id="visitor-list7" class="item-icon-left item-icon-right">
+            <ion-item class="item-icon-left item-icon-right" ng-repeat="score in scores" id="{{score.eventScoreId}}">
+                <span class="item-note">{{score.eventScore}}</span>
+                <h2>{{score.userVO.firstName}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

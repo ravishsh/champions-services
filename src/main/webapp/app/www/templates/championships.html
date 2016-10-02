@@ -1,0 +1,34 @@
+<ion-view title="Championships" id="page2">
+    <ion-content padding="true" class="has-header">
+        <!--<form id="championships-form1" class="list">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="">
+            </label>
+            <ion-item class="item-avatar item-icon-right positive" id="championships-list-item5" ui-sref="tabsController.scores">
+                <h2positive>GMAAA
+                    <p>2015</p>
+                    <i class="icon ion-locked icon-accessory"></i>
+                </h2positive>
+            </ion-item>
+            <ion-item class="item-avatar item-icon-right positive" id="championships-list-item9" ui-sref="tabsController.scoreRecording">
+                <h2positive>GMAAA
+                    <p>2016</p>
+                    <i class="{icon {champ.status == 'active'?ion-unlocked : ion-locked}}"></i>
+                </h2positive>
+            </ion-item>
+        </form>-->
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="movie.name" ng-change="searchMovieDB()">
+        </label>
+        <ion-list id="visitors-list1" class=" ">
+            <ion-item class="item-avatar item-icon-right positive" ng-repeat="championship in championships" id="{{championship.eventId}}" ui-sref="tabsController.eventtracks({id: championship.eventId})">
+                <md-button>
+                    <img class="png-icon" ng-src="img/{{championship.event}}" style="width: 44px; height: 44px;">
+                </md-button>
+                <h2>{{championship.event}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

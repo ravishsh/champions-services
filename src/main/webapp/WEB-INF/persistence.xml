@@ -3,8 +3,7 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
              version="1.0">
     <persistence-unit name="championsServer" transaction-type="RESOURCE_LOCAL">
-
-        <class>com.rs.darbaan.entity.</class>
+        <class>com.rs.champions.entity.</class>
         <properties>
             <property name="javax.persistence.jdbc.url"
                  value="jdbc:mysql://champions-mum.cuho3f4prwc9.ap-south-1.rds.amazonaws.com:3306/champions"/>

@@ -18,6 +18,7 @@ import com.rs.champions.vo.ChampionshipEventVO;
 @Produces(value=MediaType.APPLICATION_JSON)
 public class ChampionshipEventService {
 
+	
 	@Autowired
 	private ChampionshipEventUtil championshipEventUtil;
 	
