@@ -24,8 +24,8 @@ angular.module('app.controllers', [])
         $http.get(serviceEndPoint.url + '/event/all')
             .then(function(response){
                     $scope.championships = response.data;
+                    $scope.championshiplogopath = "img/BreastStroke.png";
                 });
-
 })
 
 .controller('scoresCtrl', function($scope, $http,$stateParams, serviceEndPoint) {
@@ -43,76 +43,9 @@ angular.module('app.controllers', [])
                     $scope.eventTracks = response.data;
                 });
 })   
-         
-.controller('residentsCtrl', function($scope) {
-	
-})
-      
-.controller('visitorCtrl', function($scope, $stateParams, $firebaseObject) {
-	$scope.visitor = $firebaseObject(firebase.database().ref('Championships/' + $stateParams.id));
-})
-   
-.controller('residentCtrl', function($scope) {
-
-})
-   
-.controller('entryCtrl', function($scope, Camera, $stateParams, $firebaseObject) {
-	
-	var visId = $stateParams.id;
-	
-	if(visId == 0) {
-		$scope.visitor = {};
-	}else{
-		$scope.visitor = $firebaseObject(firebase.database().ref('visitors/' + $stateParams.id));
-	}
-	
-	$scope.visit = {}
-	
-	
-	$scope.takePicture = function (options) {
-	
-		var options = {
-			quality : 75,
-			targetWidth: 200,
-			targetHeight: 200,
-			sourceType: 1
-		};
-
-		Camera.getPicture(options).then(function(imageData) {
-			$scope.picture = imageData;;
-		}, function(err) {
-			console.log(err);
-		});
-		
-	};
-	
-	$scope.save = function(){
-		var newVisitorKey = firebase.database().ref().child('visitors').push().key;
-	};
-})
    
 .controller('myAccountCtrl', function($scope) {
 
-})
-   
-.controller('newVisitorCtrl', function($scope, $firebaseObject, $state) {
-	
-	$scope.formData = {};
-	
-	$scope.search = function(){
-		firebase.database().ref('visitors').orderByChild("mobile").equalTo($scope.formData.mobile).limitToLast(1).on('value', function(snapshot){
-			var key;
-			if(snapshot.exists()){
-				snapshot.forEach(function(visitorSnapshot) {
-					key = visitorSnapshot.key;
-				});
-			}else{
-				key = 0;
-			}
-			$state.go('tabsController.entry',{id: key});
-		});
-		
-	}
 })
 
 .controller('loginCtrl', function($scope, $state, $ionicLoading, $rootScope, $ionicPopup) {

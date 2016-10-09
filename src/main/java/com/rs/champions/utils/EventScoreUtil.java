@@ -63,6 +63,7 @@ public class EventScoreUtil {
 		eventScoreVO.setEventScoreId(eventScore.getEventScoreId());
 		eventScoreVO.setEventScore(eventScore.getEventScore());
 		eventScoreVO.setUserVO(userUtil.getUserVO(eventScore.getUser()));
+		eventScoreVO.setRank(eventScore.getRank());
 		return eventScoreVO;
 	}
 }

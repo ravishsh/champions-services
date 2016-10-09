@@ -21,6 +21,9 @@ public class EventScore {
 	@Column(name = "eventscore", nullable = false)
 	private String eventScore;
 	
+	@Column(name = "rank", nullable = false)
+	private Long rank;
+	
 	@ManyToOne
 	@JoinColumn(name="event_id")
 	private ChampionshipEvent championshipEvent;
@@ -73,5 +76,15 @@ public class EventScore {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	public Long getRank() {
+		return rank;
+	}
+
+	public void setRank(Long rank) {
+		this.rank = rank;
+	}
+	
+	
 	
 }

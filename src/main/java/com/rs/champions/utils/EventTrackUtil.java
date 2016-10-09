@@ -23,6 +23,9 @@ public class EventTrackUtil {
 	@Autowired
 	TrackUtil trackUtil;
 	
+	@Autowired
+	TrackCategoryUtil trackCategoryUtil;
+	
 	public List<EventTrackVO> getAll(){
 		List<EventTrackVO> eventTrackVO = new ArrayList<EventTrackVO>();
 		Iterable<EventTrack> eventTracks = eventTrackRepository.findAll();
@@ -48,6 +51,7 @@ public class EventTrackUtil {
 		eventTrackVO.setEventTrackId(eventTrack.getEventTrackId());
 		eventTrackVO.setChampionshipEventVO(championshipEventUtil.getChampionshipEventVO(eventTrack.getChampionshipEvent()));
 		eventTrackVO.setTrackVO(trackUtil.getTrackVO(eventTrack.getTrack()));
+		eventTrackVO.setTrackCategoryVO(trackCategoryUtil.getTrackCategoryVO(eventTrack.getTrackCategory()));
 		return eventTrackVO;
 	}
 }

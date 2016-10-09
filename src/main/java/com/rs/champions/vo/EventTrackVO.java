@@ -8,6 +8,8 @@ public class EventTrackVO {
 	
 	private TrackVO trackVO;
 
+	private TrackCategoryVO trackCategoryVO;
+
 	public Long getEventTrackId() {
 		return eventTrackId;
 	}
@@ -30,6 +32,14 @@ public class EventTrackVO {
 
 	public void setTrackVO(TrackVO trackVO) {
 		this.trackVO = trackVO;
+	}
+	
+	public TrackCategoryVO getTrackCategoryVO() {
+		return trackCategoryVO;
+	}
+
+	public void setTrackCategoryVO(TrackCategoryVO trackCategoryVO) {
+		this.trackCategoryVO = trackCategoryVO;
 	}
 
 }

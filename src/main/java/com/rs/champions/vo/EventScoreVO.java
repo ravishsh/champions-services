@@ -8,6 +8,8 @@ public class EventScoreVO {
 
 	private UserVO userVO;
 	
+	private Long rank;
+	
 	public UserVO getUserVO() {
 		return userVO;
 	}
@@ -31,4 +33,13 @@ public class EventScoreVO {
 	public void setEventScore(String eventScore) {
 		this.eventScore = eventScore;
 	}
+
+	public Long getRank() {
+		return rank;
+	}
+
+	public void setRank(Long rank) {
+		this.rank = rank;
+	}
+	
 }

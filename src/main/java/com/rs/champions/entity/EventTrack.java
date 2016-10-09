@@ -25,6 +25,10 @@ public class EventTrack {
 	@ManyToOne
 	@JoinColumn(name="track_id")
 	private Track track;
+	
+	@ManyToOne
+	@JoinColumn(name="trackcategory_id")
+	private TrackCategory trackCategory;
 
 	public Long getEventTrackId() {
 		return eventTrackId;
@@ -48,6 +52,14 @@ public class EventTrack {
 
 	public void setTrack(Track track) {
 		this.track = track;
+	}
+	
+	public TrackCategory getTrackCategory() {
+		return trackCategory;
+	}
+
+	public void setTrackCategory(TrackCategory trackCategory) {
+		this.trackCategory = trackCategory;
 	}
 	
 }

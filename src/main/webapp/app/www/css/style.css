@@ -1,14 +1,28 @@
 /* Empty. Add your own CSS if you like */
-.darbaan-image {
-	top: 16px;
-    left: 16px;
-    max-width: 200px;
-    max-height: 200px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
 
 .multi-line-item {
     padding-left: 16px;
+}
+
+.item-score {
+	float: right;
+    position: relative;
+    padding-top:20px;
+    padding-left: 20px;
+}
+
+.item-rank {
+	float: right;
+	left: 70%;
+}
+
+.item-name {
+	padding-top:20px;
+	padding-left:20px;
+	font-color: black;
+	float:left;
+}
+
+.body-image {
+	background-image: url("../img/noun_242995_cc.png");
 }

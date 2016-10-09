@@ -39,7 +39,8 @@
   			<ref bean="eventService"/>
   			<ref bean="eventScoreService"/> 
   			<ref bean="eventTrackService"/> 
-  			<ref bean="userService"/>			
+  			<ref bean="userService"/>
+  			<ref bean="trackCategoryService"/>		
   		</jaxrs:serviceBeans>
   		<jaxrs:providers>
 			<ref bean="jsonProvider" />
